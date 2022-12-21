@@ -1,4 +1,5 @@
 import ru.netology.loremIpsum.Text;
+import ru.netology.loremIpsum.WordsChecker;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -28,6 +29,8 @@ public class Main {
 
             }
         }
+        System.out.println("===============================================================");
+        System.out.println("задача 1");
         System.out.println("Максимальное значение у " + maxEntry);
 
         //Минимальное число повторения символа
@@ -39,7 +42,17 @@ public class Main {
             }
         }
         System.out.println("Минимальное значение у " + minEntry);
-        System.out.println(symbols);
+        //System.out.println(symbols);
+
+
+        //Поиск слов в тексте
+        WordsChecker wordsChecker= new WordsChecker(Text.Statya);
+        boolean r = wordsChecker.hasWord("copy");
+        System.out.println();
+        System.out.println("===============================================================");
+        System.out.println("задача 2");
+        System.out.println(r);
+
     }
 
 }
